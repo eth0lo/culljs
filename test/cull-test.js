@@ -24,8 +24,8 @@ function square(n) { return n * n; }
             "example": function () {
                 assert(cull.isList([]));
                 refute(cull.isList({}));
-                assert(cull.isList({ length: 4 }));
-                refute(cull.isList({ length: 4, tagName: "DIV" }));
+                refute(cull.isList({ length: 4 }));
+                assert(cull.isList(function(){return arguments}()));
             }
         },
 
